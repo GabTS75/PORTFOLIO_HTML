@@ -9,28 +9,28 @@ Crea un **portfolio personal** utilizando **HTML5** que presente tu información
 Tu portfolio debe incluir:
 
 1. Página principal (index.html) con:
-- Título y encabezado principal.
-- Una breve presentación personal.
-- Imagen personal o avatar (opcional si no tienes imagen).
+    - Título y encabezado principal.
+    - Una breve presentación personal.
+    - Imagen personal o avatar (opcional si no tienes imagen).
 2. Secciones obligatorias (pueden estar en la misma página o en páginas separadas):
-- Sobre mí: descripción personal.
-- Formación: estudios realizados. Puedes incluir enlace a CV.
-- Proyectos: lista de proyectos con descripción breve, imágenes y enlaces (si existen).
-- Contacto: formulario básico o listado de formas de contacto.
+    - Sobre mí: descripción personal.
+    - Formación: estudios realizados. Puedes incluir enlace a CV.
+    - Proyectos: lista de proyectos con descripción breve, imágenes y enlaces (si existen).
+    - Contacto: formulario básico o listado de formas de contacto.
 3. Uso correcto de:
-- Estructura HTML5 semántica (header, nav, main, section, article, footer).
-- Listas, enlaces internos y externos, encabezados y párrafos.
+    - Es tructura HTML5 semántica (header, nav, main, section, article, footer).
+    - Listas, enlaces internos y externos, encabezados y párrafos.
 
-### **Opcional**
+## Opcional
 
 - Puedes añadir **CSS** (externo) para mejorar el diseño visual del portfolio. No es obligatorio, pero suma valor y mejora la presentación.
 
-### **Entrega:**
+## Entrega
 
 - URL repositorio de GitHub (recuerda que tiene que estar público)
 - URL página funcionando en GitHub Pages
 
-## **Requisitos a evaluar**
+## Requisitos a evaluar
 
 - Estructura HTML5 Uso correcto y coherente de etiquetas semánticas. - / 2
 - Contenido requerido Todas las secciones obligatorias están presentes y completas. - / 3

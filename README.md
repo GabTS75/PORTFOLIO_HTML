@@ -1,2 +1,5 @@
-# PROYECTO EN HTML
-### 🧠 Proyecto para la asignatura de Lenguaje de Marcas
+# PROYECTO EN HTML + CSS
+
+## 🧠 Proyecto para la asignatura de Lenguaje de Marcas
+
+### Actividad 1er. Trimestre - Diciembre 2025
