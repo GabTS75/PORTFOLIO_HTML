@@ -1,119 +1,254 @@
 <!DOCTYPE html>
-<!-- Sirve para definir el tipo de documento y la versión de HTML que se está utilizando. -->
+<!-- Sirve para definir el tipo de documento y la versión de HTML que se está utilizando -->
 <html lang="es">
-<!-- Define el idioma del documento como español. -->
+<!-- Define el idioma del documento como español -->
 
 <head>
-    <!-- Ésta etiqueta contiene metadatos y enlaces a recursos externos. -->
+    <!-- Ésta etiqueta contiene metadatos y enlaces a recursos externos -->
     <meta charset="UTF-8">
     <!-- Define la codificación de caracteres del documento como UTF-8. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Configura la vista para dispositivos móviles, asegurando que el diseño se adapte con el ancho. -->
+    <!-- Configura la vista para dispositivos móviles, asegurando que el diseño se adapte con el ancho -->
     <meta name="author" content="Gabriel Ternero">
-    <!-- Indica el autor del documento. -->
+    <!-- Indica el autor del documento -->
     <meta name="copyright" content="Gabriel Ternero 2025">
-    <!-- Derechos de autor del documento. -->
+    <!-- Derechos de autor del documento -->
     <meta name="description" content="Ejercicio práctico de página en HTML">
-    <!-- Proporciona una breve descripción del contenido del documento para los motores de búsqueda. -->
+    <!-- Proporciona una breve descripción del contenido del documento para los motores de búsqueda -->
     <meta name="robots" content="index, follow">
-    <!-- Indica a los motores de búsqueda que indexen la página y sigan los enlaces. -->
+    <!-- Indica a los motores de búsqueda que indexen la página y sigan los enlaces -->
     <link rel="icon" href="./images/logoGT.png" type="image/png">
-    <!-- Enlaza un icono que se muestra en la pestaña del navegador. -->
-
-
+    <!-- Enlaza un icono que se muestra en la pestaña del navegador -->
     <title> Proyecto en HTML</title>
-    <!-- Título del documento que aparece en la pestaña del navegador. -->
+    <!-- Título del documento que aparece en la pestaña del navegador -->
 </head>
 
 <body> <!-- cuerpo principal del documento -->
+
     <p id="principio"></p>
-    <header> <!-- Encabezado de la página. -->
+
+    <header> <!-- Encabezado de la página -->
 
         <div> <!-- Caja del titulo principal -->
-            <h1>Portfolio de Gabriel Ternero</h1> <!-- El título principal de la página. -->
+
+            <h1>Portfolio de Gabriel Ternero</h1> <!-- El título principal de la página -->
+
+            <p> <!-- Información académica actual -->
+                <big>ASIR - Administrador de Sistemas Informáticos en Red</big> <br>
+                <small>Estudiante del 1er. año en la escuela de FP - PROMETEO <br>
+                    Grado Superior - Máster en Ciberseguridad</small> <br>
+            </p>
+
+            <p> <!-- Enlaces profesionales -->
+                <a href="#enlaces">Enlaces a GitHub y LinkedIn</a>
+            </p>
+            <nav> <!-- Barra de navegación con enlaces a secciones específicas de la página -->
+                <ul>
+                    <li>
+                        <a href="#sobre-mi">Sobre mí</a>
+                    </li>
+                    <li>
+                        <a href="#formacion">Formación</a>
+                    </li>
+                    <li>
+                        <a href="#proyectos">Proyectos</a>
+                    </li>
+                    <li>
+                        <a href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
-        <p> <!-- Información académica actual. -->
-            <big>ASIR - Administrador de Sistemas Informáticos en Red</big> <br>
-            <small>Estudiante del 1er. año en la escuela de FP - PROMETEO <br>
-                Grado Superior - Máster en Ciberseguridad</small> <br>
-        </p>
-
-        <p> <!-- Enlaces profesionales -->
-            <a href="#enlaces" style="text-decoration: none; color: black;">Enlaces a GitHub y LinkedIn</a>
-        </p>
-
-        <ul> <!-- Menú de navegación con enlaces a secciones específicas de la página. -->
-            <li>
-                <a href="#sobre-mi">Sobre mí</a>
-            </li>
-            <li>
-                <a href="#formacion">Formación</a>
-            </li>
-            <li>
-                <a href="#proyectos">Proyectos</a>
-            </li>
-            <li>
-                <a href="#contacto">Contacto</a>
-            </li>
-        </ul>
-
     </header>
-    <hr>
-    <main> <!-- Contenido principal de la página. -->
-        <div>
-            <section>
-                <h2 id="sobre-mi">Sobre mí</h2>
-                <!-- Sección de perfil con un encabezado de nivel 2. -->
 
-                <img src="./images/GabTShtml.JPG" alt="Mi fotografía" width="200"> <!-- Mi imagen profesional. -->
+    <hr>
+
+    <main> <!-- Contenido principal de la página -->
+
+        <div> <!--- Caja de Sobre mí -->
+
+            <section>
+
+                <h2 id="sobre-mi">Sobre mí</h2> <!-- Ancla sobre el encabezado de nivel 2 "Sobre mí" -->
+                <img src="./images/GabTShtml.JPG" alt="Mi fotografía" width="200"> <!-- Mi imagen profesional -->
                 <figcaption>Mi Imagen Profesional</figcaption>
                 <br>
+                <p>Soy un informático de la <em>"vieja escuela"</em> con mentalidad de futuro. Mi pasión por la
+                    tecnología nació
+                    a principios de los 90, entre pantallas de MS-DOS, Windows 3.11, código en Pascal, C++ y el montaje
+                    de hardware desde
+                    cero. Esa curiosidad me llevó a emprender muy joven, creando y gestionando mi propio negocio de
+                    servicios de Internet en Perú, donde aprendí que la tecnología <i>no sirve de nada</i> si no
+                    soluciona
+                    problemas reales a las personas.</p>
 
-                <p>
-                    Re-construyendome
+                <p>La vida me trajo a España a comienzos del 2005 y, como muchos, tuve que reinventarme. Durante <b>casi
+                        dos décadas</b> en
+                    el sector servicios y hostelería, forjé una capacidad de trabajo inquebrantable, gestión de equipos
+                    y resolución de conflictos bajo presión. Sin embargo, mi <em>"código fuente"</em> seguía ahí.</p>
+
+                <p>Hace un tiempo decidí que era hora de volver a casa: <b>a la tecnología</b>. Me he reciclado por
+                    completo
+                    cursando <b>ASIR</b> y especializándome intensivamente en Ciberseguridad e Inteligencia Artificial.
                 </p>
 
-                <h3>Habilidades</h3> <!-- Subtítulo habilidades. -->
+                <p>Hoy, combino <b>la experiencia vital y la responsabilidad</b> de un profesional senior, con <b>la
+                        ilusión y las
+                        ganas de aprender</b> de un junior. Busco mi oportunidad en Ciberseguridad para proteger
+                    infraestructuras digitales, aportando no solo
+                    conocimientos técnicos actualizados, sino también la madurez de quien sabe lo que es trabajar duro
+                    para conseguir un objetivo.</p>
+
                 <div> <!-- Caja de Habilidades -->
-                    <dl> <!-- Lista de definiciones para las habilidades. -->
-                        <dt><b>Técnicas:</b></dt>
-                        <dd> Conocimientos en redes, sistemas operativos, análisis de vulnerabilidades y
-                            herramientas de seguridad.</dd>
-                        <dt><b>Analíticas:</b></dt>
-                        <dd> Capacidad para identificar y evaluar riesgos de seguridad, así como para desarrollar
-                            estrategias de mitigación.</dd>
-                        <dt><b>Comunicación:</b></dt>
-                        <dd> Capacidad para comunicar de manera efectiva conceptos técnicos a audiencias no técnicas y
-                            colaborar con equipos multidisciplinarios.</dd>
-                        <dt><b>Resolución de problemas:</b></dt>
-                        <dd> Capacidad para abordar desafíos complejos de seguridad y encontrar soluciones innovadoras.
-                        </dd>
-                        <dt><b>Colaborativo:</b></dt>
-                        <dd> Capacidad para trabajar en equipo y generar sinergias dinámicas, creativas y efectivas.
-                        </dd>
-                        <dt><b>Liderazgo:</b></dt>
-                        <dd> Perfil de liderazgo de grupo y de negociación, empático, motivador, capaz de ejercer de
-                            coaching.</dd>
+                    <h3>Habilidades</h3> <!-- Subtítulo habilidades -->
+                    <h4>Técnicas (Hard Skills)</h4>
+                    <dl> <!-- Lista de definiciones para las habilidades -->
+                        <dt><b>Sistemas y Redes:</b></dt>
+                        <dd>Administración Windows/Linux, Configuración de Routers/Switches, Protocolos TCP/IP, DNS,
+                            DHCP, Cableado estructurado.</dd>
+                        <dt><b>Ciberseguridad:</b></dt>
+                        <dd>Análisis de vulnerabilidades, Respuesta a incidentes, Hardening de sistemas, Prevención de
+                            riesgos digitales.</dd>
+                        <dt><b>Datos e IA:</b></dt>
+                        <dd>Power BI (Análisis y visualización), Excel Avanzado (Power Query), Prompt Engineering
+                            (Gemini, ChatGPT, Copilot - IA Generativa).</dd>
+                        <dt><b>Herramientas:</b></dt>
+                        <dd>VirtualBox/VMware, Packet Tracer, Wireshark, Office 365.</dd>
+                    </dl>
+                    <h4>Humanas (Soft Skills)</h4>
+                    <dl>
+                        <dt><b>Resiliencia y Adaptabilidad:</b></dt>
+                        <dd>Capacidad demostrada para reinventarse y aprender tecnologías nuevas desde cero. Experiencia
+                            gestionando el cambio en entornos de alta presión.</dd>
+                        <dt><b>Liderazgo y Mentoring:</b></dt>
+                        <dd>Experiencia formando a nuevos empleados y coordinando equipos. Enfoque empático, orientado a
+                            sacar lo mejor de cada compañero (Coaching).</dd>
+                        <dt><b>Visión de Negocio:</b></dt>
+                        <dd>Al haber sido emprendedor, entiendo que la tecnología y la ciberseguridad deben servir para
+                            proteger y potenciar el negocio, no es solo "por amor al arte".</dd>
+                        <dt><b>Comunicación Efectiva:</b></dt>
+                        <dd>Habilidad para traducir problemas técnicos complejos a un lenguaje claro para clientes o
+                            gerentes no técnicos (fundamental en soporte y consultoría).</dd>
+                        <dt><b>Ética y Responsabilidad:</b></dt>
+                        <dd>Trayectoria profesional impecable en sectores sensibles (juego - dinero), priorizando
+                            siempre
+                            la transparencia y la seguridad de la información.</dd>
                     </dl>
                 </div>
-            </section>
-        </div>
-        <hr>
-        <div> <!-- Caja general de los Proyectos -->
-            <section>
-                <h2 id="proyectos">Proyectos</h2>
-                <!-- Sección de proyectos con un encabezado de nivel 2. -->
 
+            </section>
+
+        </div>
+
+        <hr>
+
+        <div> <!--- Caja general de Formación -->
+
+            <section> <!-- Sección de Formación -->
+
+                <h2 id="formacion">Formación</h2> <!-- Ancla sobre el encabezado de nivel 2 "Formación" -->
+                <div> <!-- Caja de Formación Académica -->
+                    <h3>Académico Profesional</h3>
+                    <ul>
+                        <li><strong>Técnico Superior en Administración de Sistemas Informáticos en Red (ASIR)</strong>
+                            <br>
+                            Centro de estudios: PROMETEO FP (España) | Grado Superior 100% Oficial y Homologado <br>
+                            Actualmente en curso (1er. año) | 2025-2026
+                        </li> <br>
+
+                        <li><strong>Técnico en Computación e Informática</strong> <br>
+                            Centro de estudios: Instituto Superior Tecnológico IDAT (Lima, Perú) | Grado Superior <br>
+                            Finalizado | 1992-1995
+                        </li> <br>
+                    </ul>
+                </div>
+                <div> <!-- Caja de Especialización -->
+                    <h3>Especialización y de Formación Contínua | 2024-2025</h3>
+                    <div> <!-- Caja Ciberseguridad -->
+                        <h4>Ciberseguridad y Redes</h4>
+                        <ul>
+                            <li>
+                                Ciberseguridad: Prevención, Análisis y Respuesta a Incidencias. <br>
+                                Centro: METODO Formación - SEPE
+                            </li>
+                            <li>
+                                Protocolos de Red y Tecnologías Aplicadas a la Ciberseguridad. <br>
+                                Centro: FEMXA Formación - SEPE
+                            </li>
+                        </ul>
+                    </div>
+                    <div> <!-- Caja IA y Datos -->
+                        <h4>Inteligencia Artificial y Datos</h4>
+                        <ul>
+                            <li>
+                                Inteligencia Artificial Aplicada a la Empresa. <br>
+                                Centro: LINK Formación - LABORA
+                            </li>
+                            <li>Inteligencia Artificial Generativa. <br>
+                                Centro: Google Skills - Grow with Google
+                            </li>
+                            <li>
+                                Inteligencia Artificial y Productividad. <br>
+                                Centro: Santader | Open Academy - Grow with Google
+                            </li>
+                            <li>
+                                Inteligencia Artificial y ChatGPT. <br>
+                                Centro: METODO Formación - SEPE
+                            </li>
+                            <li>
+                                Análisis de Datos con Excel: Power Query, Power Pivot y Power BI. <br>
+                                Centro: MONTE ALTO Formación - SEPE
+                            </li>
+                        </ul>
+                    </div>
+                    <div> <!-- Caja GLS -->
+                        <h4>Gestión, Liderazgo y Sostenibilidad</h4>
+                        <ul>
+                            <li>
+                                Liderazgo y Dirección de Organizaciones. <br>
+                                Centro: FEMXA Formación - SEPE
+                            </li>
+                            <li>
+                                Negociación. <br>
+                                Centro: Santader | Open Academy - ESADE
+                            </li>
+                            <li>
+                                Gestión Logística. <br>
+                                Centro: LINK Formación - LABORA
+                            </li>
+                            <li>
+                                Desarrollo Sostenible y Gestión Medioambiental. <br>
+                                Centro: MONTE ALTO Formación - SEPE
+                            </li>
+                            <li>
+                                Auditoría Medioambiental. <br>
+                                Centro: METODO Formación - LABORA
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+        <hr>
+
+        <div> <!-- Caja general de Proyectos -->
+
+            <section>
+
+                <h2 id="proyectos">Proyectos</h2> <!-- Ancla sobre el encabezado de nivel 2 "Proyectos" -->
                 <p> He trabajado en varios proyectos relacionados con la ciberseguridad, incluyendo la implementación de
                     medidas de seguridad en redes, análisis de vulnerabilidades y desarrollo de políticas de seguridad.
                     Estos proyectos me han permitido aplicar mis conocimientos teóricos en situaciones prácticas y
                     mejorar
                     mis habilidades técnicas. </p>
 
-                <h3>Proyectos de Ciberseguridad</h3> <!-- Subtítulo para los proyectos. -->
+                <h3>Proyectos de Ciberseguridad</h3> <!-- Subtítulo para los proyectos -->
 
                 <hr>
+
                 <div> <!-- Caja del Proyecto 1 -->
                     <article> <!-- Cada proyecto está contenido en un artículo separado. -->
                         <table> <!-- Tabla para organizar la imagen y el texto del proyecto. -->
@@ -161,7 +296,9 @@
                         </table>
                     </article>
                 </div>
+
                 <hr>
+
                 <div> <!-- Caja del Proyecto 2 -->
                     <article>
                         <table>
@@ -213,7 +350,9 @@
                         </table>
                     </article>
                 </div>
+
                 <hr>
+
                 <div> <!-- Caja del Proyecto 3 -->
                     <article>
                         <table>
@@ -270,14 +409,18 @@
                         </table>
                     </article>
                 </div>
-            </section>
-        </div>
-        <hr>
-        <div> <!-- Caja del Contacto-->
-            <section>
-                <h2 id="contacto">Contacto</h2>
-                <!-- Sección de contacto con un encabezado de nivel 2. -->
 
+            </section>
+
+        </div>
+
+        <hr>
+
+        <div> <!-- Caja del Contacto-->
+
+            <section>
+
+                <h2 id="contacto">Contacto</h2><!-- Ancla sobre el encabezado de nivel 2 "Contacto" -->
                 <p> Puedes contactarme rellenando el siguiente formulario: </p>
                 <div>
                     <form> <!-- Inicio del formulario de contacto. -->
@@ -311,11 +454,17 @@
                 <p>
                     <a href="#principio">Volver al principio</a>
                 </p>
+
             </section>
+
         </div>
+
     </main>
+
     <p id="enlaces"></p>
+
     <footer> <!--- Pie de página del documento -->
+
         <div> <!-- Caja del pie de página -->
             <ul>
                 <li> <!-- Elementos de la lista en línea. -->
@@ -326,10 +475,12 @@
                 </li>
             </ul>
         </div>
+
         <p>Derechos reservados Gabriel Ternero &copy; 2025</p>
         <p><small>Lenguaje de Marcas y Sistemas de Gestión de la Información <br>
                 by Profesora Olga Moreno<br>
                 ASIR | Curso 2025-2026 | FP PROMETEO</small></p>
+
     </footer>
 
 </body>
