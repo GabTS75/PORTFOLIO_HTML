@@ -5,24 +5,162 @@
 * {
     margin: 0;
     padding: 0;
+    /* Ambos eliminan todos los espacios exteriores (márgenes) e interiores (rellenos) que los navegadores añaden por defecto a los elementos HTML */
     box-sizing: border-box;
-    font-family: "Roboto", Helvetica, sans-serif;
+    /* hace que se extienda hacia adentro, manteniendo el ancho asignado y reduciendo el espacio de contenido disponible*/
 }
 
+/* Características generales en el HTML */
 html {
     scroll-behavior: smooth;
+    /* aplica un desplazamiento suave a toda la página web */
     overflow-x: hidden;
+    /* oculta cualquier contenido que se desborde horizontalmente (de izquierda a derecha) fuera de la ventana o contenedor principal */
+    position: relative;
+    /* sirve para que su posicionamiento se calcule en relación a sí mismo, permitiendo luego moverlo (y a sus elementos hijos) con top, right, bottom, left sin afectar el flujo de otros elementos. */
 }
 
+/* Variables de colores y otras caracteerísticas */
 :root {
-    --color-bg: #155e77;
-    --color-button: #60c4c8;
+    --color-bg: #f2fdff;
+    --color-header: #dffdff;
     --color-dark: #202020;
-    --color-light: #f2fdff;
-    --color-accent: #00fbff;
+    --color-light: #fdfcf4;
+    --color-base: #f9f9f9;
+    --color-accent: #e74c3c;
     --spacing: 20px;
     --border-radius: 10px;
 }
 
+/* Características del cuerpo del documento */
+body {
+    font-family: "Roboto", Helvetica, sans-serif;
+    /* Tipo de letra de todo el documento */
+    color: var(--color-dark);
+        /* Color de la letra de todo el documento */
+    background-color: var(--color-bg);
+}
 
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem;
+    /* establece un espacio o "margen" de una unidad "rem" en la parte inferior de un elemento, separándolo visualmente de lo que esté debajo */
+}
 
+/* p {
+    margin-bottom: 1rem;
+    
+} */
+
+/* Configuración general del Header */
+header {
+    text-align: center;
+    /* Centra todo el contenido horizontalmente */
+    padding: 30px 20px;
+    /* Espacio interno arriba/abajo y lados */
+    background-color: var(--color-header);
+    /* Color de fondo suave */
+    border-bottom: 1px solid #ddd;
+    /* Línea sutil de separación inferior */
+}
+
+/* Espaciado para el bloque del título */
+header .encabezado {
+    /* Selecciona el primer elemento <div> "encabezado" que es hijo directo del elemento <header> */
+    margin-bottom: 20px;
+    /* Separa el bloque del título de la barra de navegación */
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    /* Quita margen superior y deja un poco abajo */
+    color: #333;
+}
+
+/* Estilo "Botón" para el enlace de GitHub/LinkedIn */
+/* Seleccionamos el enlace "dentro del segundo párrafo" del primer <div> */
+header .encabezado .linkprof a {
+    display: inline-block;
+    /* Necesario para aplicar padding y transformaciones */
+    text-decoration: none;
+    /* Quita el subrayado */
+    background-color: #2c3e50;
+    /* Color inicial */
+    color: white;
+    /* Texto blanco */
+    padding: 10px 25px;
+    /* Relleno para que parezca botón */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    margin-top: 5px;
+    /* Establece un espacio de 5 píxeles por encima del elemento */
+    font-weight: bold;
+    /* Hace que el texto seleccionado se muestre en negrita o con un grosor de fuente mayor que el texto normal */
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    /* Transición lenta (0.5 segundos) */
+}
+
+/* Efecto Hover del "botón" (al pasar el ratón) */
+header .encabezado .linkprof a:hover {
+    background-color: var(--color-accent);
+    /* Cambio a color rojo suave (color de acento) */
+    transform: translateY(-2px);
+    /* Pequeño efecto de elevación */
+}
+
+/* Barra de navegación horizontal y limpia */
+nav ul {
+    list-style-type: none;
+    /* Quita las viñetas (puntos) */
+    display: flex;
+    /* Convierte la lista en horizontal */
+    justify-content: center;
+    /* Centra los elementos */
+    flex-wrap: wrap;
+    /* Permite que bajen si la pantalla es muy pequeña (adaptabilidad) */
+}
+
+nav li {
+    position: relative;
+    /* Necesario para posicionar el separador */
+}
+
+/* El separador "|" entre enlaces */
+/* Se usa "::after" para crear el símbolo después de cada <li>, excepto el último */
+nav li:not(:last-child)::after {
+    content: "|";
+    margin: 0 12px;
+    /* Espacio a los lados del símbolo */
+    color: #ccc;
+    /* Color gris suave para el separador */
+}
+
+/* Estilos y transición de los enlaces del menú */
+nav a {
+    text-decoration: none;
+    /* Quita el subrayado */
+    color: #555;
+    /* Color de texto gris oscuro */
+    font-size: 1.1em;
+    font-weight: 500;
+    /* Definen el tamaño "size" y el grosor "weight" de la fuente de un elemento */
+    transition: color 0.4s ease;
+    /* Transición lenta de color */
+}
+
+/* Efecto Hover del menú */
+nav a:hover {
+    color: var(--color-accent);
+    /* Cambia al mismo color de acento que el botón */
+}
+
+/* Estilo para el texto pequeño académico */
+header .infoprof small {
+    display: block;
+    /* Convierte un elemento HTML en un "bloque", haciendo que ocupe todo el ancho disponible de su contenedor */
+    margin-top: 5px;
+    color: #666;
+    line-height: 1.5;
+}
