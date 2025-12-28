@@ -30,7 +30,6 @@ html {
     --color-box: #fdfdfd;    
     --color-box1: #555;
     --color-box2: #333;
-    --color-light: #fdfcf4;
     --color-profblue: #2c3e50;
     --color-accent: #e74c3c;
     --color-bbb: #bbb;
@@ -99,7 +98,7 @@ header .encabezado .linkProf a {
     /* Quita el subrayado */
     background-color: var(--color-profblue);
     /* Color inicial */
-    color: var(--color-light);
+    color: var(--color-box);
     /* Texto clarito */
     padding: 10px 25px;
     /* Relleno para que parezca botón */
@@ -176,21 +175,14 @@ header .infoProf small {
     line-height: 1.5;
 }
 
-/*
-main{
-    min-height: 380vh;
-}
-*/
-
-/* Configuración de la Sección "Sobre mí" */
-.sobreMi {
+/* Configuración de cada sección en su caja respectiva */
+.sobreMi, .formacion {
     max-width: 1000px;
     /* Ancho máximo para que no se estire demasiado en pantallas grandes */
     margin: 0 auto;
     /* Centrado del bloque en la página */
     padding: 40px 20px;
     /* Espaciado interno */
-    /* font-family: 'Arial', sans-serif; */
     color: var(--color-box2);
     line-height: 1.6;
     /* Altura de línea para facilitar la lectura */
@@ -224,7 +216,7 @@ h3 {
     /* Centra la imagen y el texto dentro de la caja */
 }
 
-/* 2. La estética de la imagen */
+/* La estética de la imagen */
 .sobreMi section figure img {
     width: 100%;
     /* Se adapta al ancho de la caja (200px) */
@@ -236,7 +228,7 @@ h3 {
     /* Evita un pequeño espacio blanco extraño bajo la imagen */
 }
 
-/* 3. El "figcaption" (pie de la foto) */
+/* El "figcaption" (pie de la foto) */
 .sobreMi figure figcaption {
     font-size: 0.9em;
     font-style: italic;
@@ -254,7 +246,7 @@ section p {
 /* Caja contenedora de Habilidades (.skills) */
 .sobreMi .skills {
     margin-top: 40px;
-    /* Separación de la biografía */
+    /* Separación entre el texto "Sobre mí" y la caja "skills" */
     padding: 30px;
     border: 1px solid var(--color-ddd);
     /* Borde muy sutil */
@@ -342,4 +334,116 @@ dd {
     border-left: 3px solid var(--color-eee);
     /* Línea decorativa a la izquierda de la descripción */
 }
+
+/* Separación general de la caja Formación */
+.formacion {
+    margin-top: 40px;
+    /* Separación de la sección anterior */
+}
+
+/* Estilo de las Cajas Académico y Especialización */
+.academico, .especializacion {
+    background-color: var(--color-box);
+    /* Fondo suave */
+    border: 1px solid var(--color-eee);
+    /* Borde sutil */
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+    padding: 30px;
+    /* Espacio interno */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+    /* Sombra leve */
+    margin-top: 50px;
+    /* Separación con el título "Formación" */
+    margin-bottom: 40px;
+    /* Separación entre la caja Académica y la de Especialización */
+}
+
+/* Subtítulos "h3" dentro de las cajas */
+.academico h3, .especializacion h3 {
+    border-bottom: 2px solid var(--color-eee);
+    /* Línea divisoria debajo del título */
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    width: 100%;
+    /* Para que ocupe todo el ancho */
+    color: var(--color-profblue);
+}
+
+/* Configuración interna de la caja "Especialización" */
+/* Flexbox sirve para que las cajas internas ("ciber", "iaDatos", "gls") se acomoden bien */
+.especializacion {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos bajen si no caben */
+    gap: 20px;
+    /* Espacio entre las tarjetas internas */
+}
+
+/* Estilo de las cajas "ciber", "iaDatos" y "gls" */
+.ciber, .iaDatos, .gls {
+    flex: 1 1 300px;
+    /* Crecen para ocupar espacio, mínimo 300px de ancho */
+    background-color: var(--color-fff);
+    /* Fondo blanco puro para resaltar sobre el gris suave */
+    border: 1px solid var(--color-ddd);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    /* Sombra leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    /* Transición para el efecto botón/elevación */
+    
+}
+
+/* Efecto Hover (al pasar el ratón) en las sub-cajas */
+.ciber:hover, .iaDatos:hover, .gls:hover {
+    transform: translateY(-5px);
+    /* Se eleva un poco */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border-color: var(--color-bbb);
+}
+
+/* Para los subtítulos "h4" de las sub-cajas */
+.ciber h4, .iaDatos h4, .gls h4 {
+    color: var(--color-accent);
+    /* Color de acento rojo suave */
+    margin-top: 0;
+    font-size: 1.1em;
+    min-height: 2.5em;
+    /* Truco visual: altura mínima para alinear títulos de varias líneas */
+}
+
+/* Estilo para las Listas (ul y li), que se vean limpias */
+.formacion ul {
+    list-style-type: none;
+    /* Quita los puntos negros por defecto */
+    padding: 0;
+    margin: 0;
+}
+
+.formacion li {
+    position: relative;
+    padding-left: 15px;
+    /* Espacio para la línea decorativa a la izquierda */
+    margin-bottom: 20px;
+    /* Espacio entre cada item de la lista */
+    border-left: 3px solid var(--color-eee);
+    /* Línea vertical elegante a la izquierda */
+    line-height: 1.6;
+    /* Altura de línea para buena lectura */
+    color: var(--color-box1);
+}
+
+/* Resaltar el texto en cada título de los cursos) */
+.formacion li strong {
+    color: var(--color-box2);
+    font-size: 1.05em;
+    display: block;
+    /* Hace que el título ocupe su propia línea aunque no haya <br> */
+    margin-bottom: 5px;
+}
+
+
+
 
