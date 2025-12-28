@@ -27,7 +27,7 @@
 
 <body> <!-- cuerpo principal del documento -->
 
-    <div>
+    <div class="gradient">
 
         <p id="principio"></p>
 
@@ -37,13 +37,13 @@
 
                 <h1>Portfolio de Gabriel Ternero</h1> <!-- El título principal de la página -->
 
-                <p class="infoprof"> <!-- Información académica actual -->
+                <p class="infoProf"> <!-- Información académica actual -->
                     <b>ASIR - Administrador de Sistemas Informáticos en Red</b> <br>
                     <small>Estudiante del 1er. año - PROMETEO FP <br>
                         Grado Superior - Máster en Ciberseguridad</small> <br>
                 </p>
 
-                <p class="linkprof"> <!-- Enlaces profesionales -->
+                <p class="linkProf"> <!-- Enlaces profesionales -->
                     <a href="#enlaces">Enlaces a GitHub y LinkedIn</a>
                 </p>
             </div>
@@ -54,13 +54,13 @@
                             <a href="#sobre-mi">Sobre mí</a>
                         </li>
                         <li>
-                            <a href="#formacion">Formación</a>
+                            <a href="#mi-formacion">Formación</a>
                         </li>
                         <li>
-                            <a href="#proyectos">Proyectos</a>
+                            <a href="#mis-proyectos">Proyectos</a>
                         </li>
                         <li>
-                            <a href="#contacto">Contacto</a>
+                            <a href="#contactar">Contacto</a>
                         </li>
                     </ul>
                 </nav>
@@ -69,7 +69,7 @@
 
         <main> <!-- Contenido principal de la página -->
 
-            <div> <!--- Caja de Sobre mí -->
+            <div class="sobreMi"> <!--- Caja de Sobre mí -->
 
                 <section>
 
@@ -170,14 +170,12 @@
 
             </div>
 
-            <hr>
-
-            <div> <!--- Caja general de Formación -->
+            <div class="formacion"> <!--- Caja general de Formación -->
 
                 <section> <!-- Sección de Formación -->
 
-                    <h2 id="formacion">Formación</h2> <!-- Ancla sobre el encabezado de nivel 2 "Formación" -->
-                    <div> <!-- Caja de Formación Académica -->
+                    <h2 id="mi-formacion">Formación</h2> <!-- Ancla sobre el encabezado de nivel 2 "Formación" -->
+                    <div class="academico"> <!-- Caja de Formación Académica -->
                         <h3>Académico Profesional</h3>
                         <ul>
                             <li><strong>Técnico Superior en Administración de Sistemas Informáticos en Red
@@ -194,9 +192,9 @@
                             </li> <br>
                         </ul>
                     </div>
-                    <div> <!-- Caja de Especialización -->
+                    <div class="especializacion"> <!-- Caja de Especialización -->
                         <h3>Especialización y de Formación Contínua | 2024-2025</h3>
-                        <div> <!-- Caja Ciberseguridad -->
+                        <div class="ciber"> <!-- Caja Ciberseguridad -->
                             <h4>Ciberseguridad y Redes</h4>
                             <ul>
                                 <li>
@@ -209,7 +207,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div> <!-- Caja IA y Datos -->
+                        <div class="iaDatos"> <!-- Caja IA y Datos -->
                             <h4>Inteligencia Artificial y Datos</h4>
                             <ul>
                                 <li>
@@ -233,7 +231,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div> <!-- Caja GLS -->
+                        <div class="gls"> <!-- Caja GLS -->
                             <h4>Gestión, Liderazgo y Sostenibilidad</h4>
                             <ul>
                                 <li>
@@ -264,13 +262,11 @@
 
             </div>
 
-            <hr>
+            <div class="proyectos"> <!-- Caja general de Proyectos -->
 
-            <div> <!-- Caja general de Proyectos -->
+                <section> <!-- Sección de Proyectos -->
 
-                <section>
-
-                    <h2 id="proyectos">Proyectos</h2> <!-- Ancla sobre el encabezado de nivel 2 "Proyectos" -->
+                    <h2 id="mis-proyectos">Proyectos</h2> <!-- Ancla sobre el encabezado de nivel 2 "Proyectos" -->
                     <p> He trabajado en varios proyectos relacionados con la ciberseguridad, incluyendo la
                         implementación de
                         medidas de seguridad en redes, análisis de vulnerabilidades y desarrollo de políticas de
@@ -283,7 +279,7 @@
 
                     <hr>
 
-                    <div> <!-- Caja del Proyecto 1 -->
+                    <div class="ciber"> <!-- Caja del Proyecto 1 -->
                         <article> <!-- Cada proyecto está contenido en un artículo separado. -->
                             <table> <!-- Tabla para organizar la imagen y el texto del proyecto. -->
                                 <tr>
@@ -341,7 +337,7 @@
 
                     <hr>
 
-                    <div> <!-- Caja del Proyecto 2 -->
+                    <div class="seguridad"> <!-- Caja del Proyecto 2 -->
                         <article>
                             <table>
                                 <tr>
@@ -400,7 +396,7 @@
 
                     <hr>
 
-                    <div> <!-- Caja del Proyecto 3 -->
+                    <div class="desarrollo"> <!-- Caja del Proyecto 3 -->
                         <article>
                             <table>
                                 <tr>
@@ -463,15 +459,15 @@
 
                 </section>
 
+                <hr>
+
             </div>
 
-            <hr>
-
-            <div> <!-- Caja del Contacto-->
+            <div class="contacto"> <!-- Caja del Contacto-->
 
                 <section>
 
-                    <h2 id="contacto">Contacto</h2><!-- Ancla sobre el encabezado de nivel 2 "Contacto" -->
+                    <h2 id="contactar">Contacto</h2><!-- Ancla sobre el encabezado de nivel 2 "Contacto" -->
                     <p> Puedes contactarme rellenando el siguiente formulario: </p>
                     <div>
                         <form> <!-- Inicio del formulario de contacto. -->
@@ -503,7 +499,7 @@
                         contáctame
                         para discutir posibles proyectos o intercambiar ideas.
                     </p>
-                    <p>
+                    <p class="linkProf">
                         <a href="#principio">Volver al principio</a>
                     </p>
 
@@ -517,7 +513,7 @@
 
         <footer> <!--- Pie de página del documento -->
 
-            <div> <!-- Caja del pie de página -->
+            <div class="links"> <!-- Caja del pie de página -->
                 <ul>
                     <li> <!-- Elementos de la lista en línea. -->
                         <a href="https://github.com/GabTS75" target="_blank">GitHub</a>
@@ -528,7 +524,7 @@
                 </ul>
             </div>
 
-            <p>Derechos reservados Gabriel Ternero &copy; 2025</p>
+            <p>Gabriel Ternero | Derechos reservados &copy; 2025</p>
             <p><small>Lenguaje de Marcas y Sistemas de Gestión de la Información <br>
                     by Profesora Olga Moreno<br>
                     ASIR | Curso 2025-2026 | FP PROMETEO</small></p>

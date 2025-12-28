@@ -13,18 +13,20 @@
 /* Características generales en el HTML */
 html {
     scroll-behavior: smooth;
-    /* aplica un desplazamiento suave a toda la página web */
+    /* Aplica un desplazamiento suave a toda la página web */
     overflow-x: hidden;
-    /* oculta cualquier contenido que se desborde horizontalmente (de izquierda a derecha) fuera de la ventana o contenedor principal */
+    /* Oculta cualquier contenido que se desborde horizontalmente (de izquierda a derecha) fuera de la ventana o contenedor principal */
     position: relative;
     /* sirve para que su posicionamiento se calcule en relación a sí mismo, permitiendo luego moverlo (y a sus elementos hijos) con top, right, bottom, left sin afectar el flujo de otros elementos. */
 }
 
 /* Variables de colores y otras caracteerísticas */
 :root {
-    --color-bg: #fffffa;
+
+    --color-bg1: lightcyan;
+    --color-bg2: lightblue;
     --color-dark: #202020;
-    --color-header: #dffdff;
+    --color-header: #dffdff20;
     --color-box: #fdfdfd;    
     --color-box1: #555;
     --color-box2: #333;
@@ -35,8 +37,16 @@ html {
     --color-ccc: #ccc;
     --color-ddd: #ddd;
     --color-eee: #eee;
-    --spacing: 20px;
-    --border-radius: 10px;
+    --color-fff: #fff;
+}
+
+.gradient {
+    min-height: 100svh;
+    /* min-height: Define la altura mínima de un elemento. Si el contenido requiere más espacio, el elemento crecerá, pero nunca será más pequeño que este valor. */
+    /* 100svh ("s" de "small" y "vh" de "viewport height"): Significa el 100% de la altura de la ventana gráfica más pequeña, que se ajusta dinámicamente cuando las barras de herramientas (como las de navegadores móviles) aparecen o desaparecen, a diferencia de 100vh que usa la altura máxima del viewport.  */
+    background: linear-gradient(to right, var(--color-bg1) 0%, var(--color-bg2) 100%);
+    /* Aplica un fondo degradado lineal, creando una transición suave de color de izquierda a derecha. */
+    position: relative;
 }
 
 /* Características del cuerpo del documento */
@@ -45,7 +55,6 @@ body {
     /* Tipo de letra de todo el documento */
     color: var(--color-dark);
     /* Color de la letra de todo el documento */
-    background-color: var(--color-bg);
 }
 
 h1,
@@ -53,7 +62,7 @@ h2,
 h3,
 h4 {
     margin-bottom: 1rem;
-    /* establece un espacio o "margen" de una unidad "rem" en la parte inferior de un elemento, separándolo visualmente de lo que esté debajo */
+    /* Establece un espacio o "margen" de una unidad "rem" en la parte inferior de un elemento, separándolo visualmente de lo que esté debajo para los encabezados*/
 }
 
 /* Configuración general del Header */
@@ -83,7 +92,7 @@ header h1 {
 
 /* Estilo "Botón" para el enlace de GitHub/LinkedIn */
 /* Seleccionamos el enlace "dentro del segundo párrafo" del primer <div> */
-header .encabezado .linkprof a {
+header .encabezado .linkProf a {
     display: inline-block;
     /* Necesario para aplicar padding y transformaciones */
     text-decoration: none;
@@ -105,7 +114,7 @@ header .encabezado .linkprof a {
 }
 
 /* Efecto Hover del "botón" (al pasar el ratón) */
-header .encabezado .linkprof a:hover {
+header .encabezado .linkProf a:hover {
     background-color: var(--color-accent);
     /* Cambio a color rojo suave (color de acento) */
     transform: translateY(-2px);
@@ -159,7 +168,7 @@ nav a:hover {
 }
 
 /* Estilo para el texto pequeño académico */
-header .infoprof small {
+header .infoProf small {
     display: block;
     /* Convierte un elemento HTML en un "bloque", haciendo que ocupe todo el ancho disponible de su contenedor */
     margin-top: 5px;
@@ -167,8 +176,14 @@ header .infoprof small {
     line-height: 1.5;
 }
 
+/*
+main{
+    min-height: 380vh;
+}
+*/
+
 /* Configuración de la Sección "Sobre mí" */
-section {
+.sobreMi {
     max-width: 1000px;
     /* Ancho máximo para que no se estire demasiado en pantallas grandes */
     margin: 0 auto;
@@ -194,7 +209,7 @@ h3 {
 }
 
 /* La etiqueta "figure" (este contenedor manda sobre la posición) */
-section figure {
+.sobreMi section figure {
     float: right;
     /* La caja entera "figure" se va a la derecha */
     width: 200px;
@@ -210,19 +225,19 @@ section figure {
 }
 
 /* 2. La estética de la imagen */
-section figure img {
+.sobreMi section figure img {
     width: 100%;
     /* Se adapta al ancho de la caja (200px) */
     border-radius: 8px;
     /* Bordes redondeados */
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
     /* La sombra va en la imagen */
     display: block;
     /* Evita un pequeño espacio blanco extraño bajo la imagen */
 }
 
 /* 3. El "figcaption" (pie de la foto) */
-section figure figcaption {
+.sobreMi figure figcaption {
     font-size: 0.9em;
     font-style: italic;
     color: var(--color-box1);
@@ -234,12 +249,10 @@ section figure figcaption {
 section p {
     margin-bottom: 1.5em;
     /* Separación clara entre párrafos */
-    /*text-align: justify;
-     Justificado para bloques de texto elegantes */
 }
 
 /* Caja contenedora de Habilidades (.skills) */
-.skills {
+.sobreMi .skills {
     margin-top: 40px;
     /* Separación de la biografía */
     padding: 30px;
@@ -249,7 +262,7 @@ section p {
     /* Esquinas redondeadas */
     background-color: var(--color-box);
     /* Fondo casi blanco */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
     /* Sombra general suave */
     display: flex;
     /* Flexbox para organizar el título y las cajas internas */
@@ -258,10 +271,11 @@ section p {
     gap: 20px;
     /* Espacio entre las cajas */
     justify-content: space-between;
+    /* ¡INTERESANTE! Distribuye los elementos "hijos" de manera uniforme a lo largo del eje principal (por defecto, horizontal), colocando el primer elemento pegado al inicio del contenedor y el último pegado al final, con el espacio restante repartido equitativamente entre los elementos intermedios */
 }
 
 /* Para forzar al título "h3" a ocupar todo el ancho para que quede arriba */
-.skills h3 {
+.sobreMi .skills h3 {
     width: 100%;
     border-bottom: 2px solid var(--color-eee);
     padding-bottom: 10px;
@@ -275,7 +289,7 @@ section p {
     min-width: 300px;
     /* Si la pantalla es pequeña, ocupan todo el ancho */
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--color-fff);
     border: 1px solid var(--color-ddd);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -294,13 +308,14 @@ section p {
     border-color: var(--color-bbb);
 }
 
-/* Para los títulos "h4" dentro de las cajas */
+/* Para los títulos "h4" dentro de sus respectivas cajas */
 .hard h4,
 .soft h4 {
     margin-top: 0;
     color: var(--color-accent);
     /* Color de acento (rojo suave) para diferenciar */
     text-transform: uppercase;
+    /* Convierte todas las letras de un elemento de texto a mayúsculas, sin cambiar el contenido original en HTML, solo su presentación visual */
     font-size: 0.95em;
     letter-spacing: 1px;
 }
@@ -319,7 +334,7 @@ dt {
 
 dd {
     margin-left: 0;
-    /* Quitamos el margen por defecto */
+    /* Quita el margen izquierdo por defecto */
     margin-bottom: 10px;
     color: var(--color-box1);
     font-size: 0.95em;
