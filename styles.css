@@ -22,12 +22,19 @@ html {
 
 /* Variables de colores y otras caracteerísticas */
 :root {
-    --color-bg: #f2fdff;
-    --color-header: #dffdff;
+    --color-bg: #fffffa;
     --color-dark: #202020;
+    --color-header: #dffdff;
+    --color-box: #fdfdfd;    
+    --color-box1: #555;
+    --color-box2: #333;
     --color-light: #fdfcf4;
-    --color-base: #f9f9f9;
+    --color-profblue: #2c3e50;
     --color-accent: #e74c3c;
+    --color-bbb: #bbb;
+    --color-ccc: #ccc;
+    --color-ddd: #ddd;
+    --color-eee: #eee;
     --spacing: 20px;
     --border-radius: 10px;
 }
@@ -37,7 +44,7 @@ body {
     font-family: "Roboto", Helvetica, sans-serif;
     /* Tipo de letra de todo el documento */
     color: var(--color-dark);
-        /* Color de la letra de todo el documento */
+    /* Color de la letra de todo el documento */
     background-color: var(--color-bg);
 }
 
@@ -49,11 +56,6 @@ h4 {
     /* establece un espacio o "margen" de una unidad "rem" en la parte inferior de un elemento, separándolo visualmente de lo que esté debajo */
 }
 
-/* p {
-    margin-bottom: 1rem;
-    
-} */
-
 /* Configuración general del Header */
 header {
     text-align: center;
@@ -62,7 +64,7 @@ header {
     /* Espacio interno arriba/abajo y lados */
     background-color: var(--color-header);
     /* Color de fondo suave */
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--color-ddd);
     /* Línea sutil de separación inferior */
 }
 
@@ -76,7 +78,7 @@ header .encabezado {
 header h1 {
     margin: 0 0 10px 0;
     /* Quita margen superior y deja un poco abajo */
-    color: #333;
+    color: var(--color-dark);
 }
 
 /* Estilo "Botón" para el enlace de GitHub/LinkedIn */
@@ -86,10 +88,10 @@ header .encabezado .linkprof a {
     /* Necesario para aplicar padding y transformaciones */
     text-decoration: none;
     /* Quita el subrayado */
-    background-color: #2c3e50;
+    background-color: var(--color-profblue);
     /* Color inicial */
-    color: white;
-    /* Texto blanco */
+    color: var(--color-light);
+    /* Texto clarito */
     padding: 10px 25px;
     /* Relleno para que parezca botón */
     border-radius: 5px;
@@ -133,7 +135,7 @@ nav li:not(:last-child)::after {
     content: "|";
     margin: 0 12px;
     /* Espacio a los lados del símbolo */
-    color: #ccc;
+    color: var(--color-ccc);
     /* Color gris suave para el separador */
 }
 
@@ -141,7 +143,7 @@ nav li:not(:last-child)::after {
 nav a {
     text-decoration: none;
     /* Quita el subrayado */
-    color: #555;
+    color: var(--color-box1);
     /* Color de texto gris oscuro */
     font-size: 1.1em;
     font-weight: 500;
@@ -161,6 +163,168 @@ header .infoprof small {
     display: block;
     /* Convierte un elemento HTML en un "bloque", haciendo que ocupe todo el ancho disponible de su contenedor */
     margin-top: 5px;
-    color: #666;
+    color: var(--color-box1);
     line-height: 1.5;
 }
+
+/* Configuración de la Sección "Sobre mí" */
+section {
+    max-width: 1000px;
+    /* Ancho máximo para que no se estire demasiado en pantallas grandes */
+    margin: 0 auto;
+    /* Centrado del bloque en la página */
+    padding: 40px 20px;
+    /* Espaciado interno */
+    /* font-family: 'Arial', sans-serif; */
+    color: var(--color-box2);
+    line-height: 1.6;
+    /* Altura de línea para facilitar la lectura */
+    overflow: hidden;
+    /* Limpia los flotados internos si fuera necesario */
+}
+
+/* Títulos con sombra suave */
+h2,
+h3 {
+    color: var(--color-profblue);
+    /* Color azul oscuro */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+    /* Sombra suave para los subtitulos */
+    margin-bottom: 20px;
+}
+
+/* La etiqueta "figure" (este contenedor manda sobre la posición) */
+section figure {
+    float: right;
+    /* La caja entera "figure" se va a la derecha */
+    width: 200px;
+    /* Controlamos el ancho total aquí */
+    margin: 0;
+    /* ¡IMPORTANTE! figure trae márgenes por defecto, hay que quitarlos */
+    margin-left: 25px;
+    /* Separación con el texto de la izquierda */
+    margin-bottom: 20px;
+    /* Separación por debajo */
+    text-align: center;
+    /* Centra la imagen y el texto dentro de la caja */
+}
+
+/* 2. La estética de la imagen */
+section figure img {
+    width: 100%;
+    /* Se adapta al ancho de la caja (200px) */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    /* La sombra va en la imagen */
+    display: block;
+    /* Evita un pequeño espacio blanco extraño bajo la imagen */
+}
+
+/* 3. El "figcaption" (pie de la foto) */
+section figure figcaption {
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--color-box1);
+    margin-top: 8px;
+    /* Espacio entre la imagen y el nombre */
+}
+
+/* Párrafos */
+section p {
+    margin-bottom: 1.5em;
+    /* Separación clara entre párrafos */
+    /*text-align: justify;
+     Justificado para bloques de texto elegantes */
+}
+
+/* Caja contenedora de Habilidades (.skills) */
+.skills {
+    margin-top: 40px;
+    /* Separación de la biografía */
+    padding: 30px;
+    border: 1px solid var(--color-ddd);
+    /* Borde muy sutil */
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+    background-color: var(--color-box);
+    /* Fondo casi blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    /* Sombra general suave */
+    display: flex;
+    /* Flexbox para organizar el título y las cajas internas */
+    flex-wrap: wrap;
+    /* Permite que los elementos bajen de línea si no caben */
+    gap: 20px;
+    /* Espacio entre las cajas */
+    justify-content: space-between;
+}
+
+/* Para forzar al título "h3" a ocupar todo el ancho para que quede arriba */
+.skills h3 {
+    width: 100%;
+    border-bottom: 2px solid var(--color-eee);
+    padding-bottom: 10px;
+}
+
+/* Cajas de Hard y Soft Skills (Estilo Botón) */
+.hard,
+.soft {
+    flex: 1 1 40%;
+    /* Crecen y ocupan al menos el 40% del ancho (se ponen lado a lado) */
+    min-width: 300px;
+    /* Si la pantalla es pequeña, ocupan todo el ancho */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid var(--color-ddd);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transición para el efecto botón */
+}
+
+/* Efecto al pasar el ratón (Hover) sobre las cajas de skills */
+.hard:hover,
+.soft:hover {
+    transform: translateY(-5px);
+    /* Se eleva 5 pixeles hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    /* La sombra crece */
+    border-color: var(--color-bbb);
+}
+
+/* Para los títulos "h4" dentro de las cajas */
+.hard h4,
+.soft h4 {
+    margin-top: 0;
+    color: var(--color-accent);
+    /* Color de acento (rojo suave) para diferenciar */
+    text-transform: uppercase;
+    font-size: 0.95em;
+    letter-spacing: 1px;
+}
+
+/* Listas de Definición (dl, dt, dd) */
+dl {
+    margin: 0;
+}
+
+dt {
+    font-weight: bold;
+    color: var(--color-box2);
+    margin-top: 15px;
+    font-size: 1.05em;
+}
+
+dd {
+    margin-left: 0;
+    /* Quitamos el margen por defecto */
+    margin-bottom: 10px;
+    color: var(--color-box1);
+    font-size: 0.95em;
+    padding-left: 10px;
+    border-left: 3px solid var(--color-eee);
+    /* Línea decorativa a la izquierda de la descripción */
+}
+
