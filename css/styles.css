@@ -20,7 +20,7 @@ html {
     /* sirve para que su posicionamiento se calcule en relación a sí mismo, permitiendo luego moverlo (y a sus elementos hijos) con top, right, bottom, left sin afectar el flujo de otros elementos. */
 }
 
-/* Variables de colores y otras caracteerísticas */
+/* Variables para los colores */
 :root {
 
     --color-bg1: lightcyan;
@@ -102,7 +102,7 @@ header .encabezado .linkProf a {
     /* Texto clarito */
     padding: 10px 25px;
     /* Relleno para que parezca botón */
-    border-radius: 5px;
+    border-radius: 50px;
     /* Bordes redondeados */
     margin-top: 5px;
     /* Establece un espacio de 5 píxeles por encima del elemento */
@@ -639,6 +639,8 @@ hr {
     /* Limita el ancho para que no se vea gigante en pantallas grandes */
     margin: 0 auto;
     /* Centra el formulario en la pantalla */
+    position: relative;
+
 }
 
 /* Estilo para las etiquetas (label) */
@@ -740,7 +742,7 @@ hr {
     padding: 12px 30px;
     /* Tamaño del botón */
     border-radius: 50px;
-    /* Bordes muy redondeados (tipo píldora) */
+    /* Bordes redondeados */
     font-weight: bold;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
