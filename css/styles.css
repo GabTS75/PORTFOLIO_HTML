@@ -813,7 +813,7 @@ footer {
     /* Color blanco azulado suave */
     font-weight: bold;
     font-size: 1.1em;
-    
+
     /* Transición lenta del color */
     transition: color 0.8s ease;
 }
