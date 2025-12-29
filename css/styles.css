@@ -1,7 +1,7 @@
 /* Importar una fuente de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Configuración de reset General */
+/* Configuración de "reset" general */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ html {
     overflow-x: hidden;
     /* Oculta cualquier contenido que se desborde horizontalmente (de izquierda a derecha) fuera de la ventana o contenedor principal */
     position: relative;
-    /* sirve para que su posicionamiento se calcule en relación a sí mismo, permitiendo luego moverlo (y a sus elementos hijos) con top, right, bottom, left sin afectar el flujo de otros elementos. */
+    /* Sirve para que su posicionamiento se calcule en relación a sí mismo, permitiendo luego moverlo (y a sus elementos hijos) con top, right, bottom, left sin afectar el flujo de otros elementos. */
 }
 
 /* Variables para los colores */
@@ -64,7 +64,7 @@ h4 {
     /* Establece un espacio o "margen" de una unidad "rem" en la parte inferior de un elemento, separándolo visualmente de lo que esté debajo para los encabezados*/
 }
 
-/* Configuración general del Header */
+/* Configuración general del "header" */
 header {
     text-align: center;
     /* Centra todo el contenido horizontalmente */
@@ -90,7 +90,6 @@ header h1 {
 }
 
 /* Estilo "Botón" para el enlace de GitHub/LinkedIn */
-/* Seleccionamos el enlace "dentro del segundo párrafo" del primer <div> */
 header .encabezado .linkProf a {
     display: inline-block;
     /* Necesario para aplicar padding y transformaciones */
@@ -112,7 +111,7 @@ header .encabezado .linkProf a {
     /* Transición lenta (0.5 segundos) */
 }
 
-/* Efecto Hover del "botón" (al pasar el ratón) */
+/* Efecto "hover", al pasar el ratón (sobre el botón) */
 header .encabezado .linkProf a:hover {
     background-color: var(--color-dark);
     /* Cambio a color final */
@@ -160,7 +159,7 @@ nav a {
     /* Transición lenta de color */
 }
 
-/* Efecto Hover del menú */
+/* Efecto "hover" del menú */
 nav a:hover {
     color: var(--color-accent);
     /* Cambia al color acentuado */
@@ -172,7 +171,7 @@ header .infoProf small {
     /* Convierte un elemento HTML en un "bloque", haciendo que ocupe todo el ancho disponible de su contenedor */
     margin-top: 5px;
     color: var(--color-bbb);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* Configuración de cada sección en su caja respectiva */
@@ -246,7 +245,7 @@ section p {
     /* Separación clara entre párrafos */
 }
 
-/* Caja contenedora de Habilidades (.skills) */
+/* Caja contenedora de "skills" (Habilidades) */
 .sobreMi .skills {
     margin-top: 40px;
     /* Separación entre el texto "Sobre mí" y la caja "skills" */
@@ -276,7 +275,7 @@ section p {
     padding-bottom: 10px;
 }
 
-/* Cajas de Hard y Soft Skills (Estilo Botón) */
+/* Cajas de "hard" y "soft" skills */
 .hard,
 .soft {
     flex: 1 1 40%;
@@ -293,13 +292,13 @@ section p {
     /* Transición para el efecto botón */
 }
 
-/* Efecto al pasar el ratón (Hover) sobre las cajas de skills */
+/* Efecto "hover" al pasar el ratón sobre las cajas de skills */
 .hard:hover,
 .soft:hover {
     transform: translateY(-5px);
     /* Se eleva 5 pixeles hacia arriba */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    /* La sombra crece */
+    /* hace el efecto de que la sombra aumenta */
     border-color: var(--color-bbb);
 }
 
@@ -308,7 +307,7 @@ section p {
 .soft h4 {
     margin-top: 0;
     color: var(--color-accent);
-    /* Color de acento (rojo suave) para diferenciar */
+    /* Color de acento (rojo suave) para diferenciar (acentuar) */
     text-transform: uppercase;
     /* Convierte todas las letras de un elemento de texto a mayúsculas, sin cambiar el contenido original en HTML, solo su presentación visual */
     font-size: 0.95em;
@@ -344,7 +343,7 @@ dd {
     /* Separación de la sección anterior */
 }
 
-/* Estilo de las Cajas Académico y Especialización */
+/* Estilo de las cajas "Académico" y "Especialización" */
 .academico,
 .especializacion {
     background-color: var(--color-box);
@@ -360,7 +359,7 @@ dd {
     margin-top: 50px;
     /* Separación con el título "Formación" */
     margin-bottom: 40px;
-    /* Separación entre la caja Académica y la de Especialización */
+    /* Separación entre ellas */
 }
 
 /* Subtítulos "h3" dentro de las cajas */
@@ -376,9 +375,9 @@ dd {
 }
 
 /* Configuración interna de la caja "Especialización" */
-/* Flexbox sirve para que las cajas internas ("ciber", "iaDatos", "gls") se acomoden bien */
 .especializacion {
     display: flex;
+    /* Flexbox sirve para que las cajas internas ("ciber", "iaDatos", "gls") se acomoden bien */
     flex-wrap: wrap;
     /* Permite que los elementos bajen si no caben */
     gap: 20px;
@@ -397,23 +396,24 @@ dd {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    /* Sombra leve */
+    /* Sombra muy leve */
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     /* Transición para el efecto botón/elevación */
 
 }
 
-/* Efecto Hover (al pasar el ratón) en las sub-cajas */
+/* Efecto "hover" al pasar el ratón sobre cada caja */
 .ciber:hover,
 .iaDatos:hover,
 .gls:hover {
     transform: translateY(-5px);
     /* Se eleva un poco */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    /* Efecto de aumentar la sombra */
     border-color: var(--color-bbb);
 }
 
-/* Para los subtítulos "h4" de las sub-cajas */
+/* Para los subtítulos "h4" en cada caja */
 .ciber h4,
 .iaDatos h4,
 .gls h4 {
@@ -440,7 +440,7 @@ dd {
     margin-bottom: 20px;
     /* Espacio entre cada item de la lista */
     border-left: 3px solid var(--color-eee);
-    /* Línea vertical elegante a la izquierda */
+    /* Línea vertical a la izquierda */
     line-height: 1.6;
     /* Altura de línea para buena lectura */
     color: var(--color-box1);
@@ -455,13 +455,12 @@ dd {
     margin-bottom: 5px;
 }
 
-/* Separación general de la sección, respecto a la sección anterior */
+/* Separación de la sección Proyectos, respecto a la sección anterior */
 .proyectos {
     margin-top: 10px;
 }
 
 /* Estilo para las cajas "ids", "segu" y "desa" de Proyectos */
-/* Cojemos a las tres clases para que tengan el mismo estilo */
 .ids,
 .segu,
 .desa {
@@ -477,10 +476,10 @@ dd {
     /* Sombra suave */
 
     transition: box-shadow 0.3s ease;
-    /* Transición suave por si quieres añadir efectos en el futuro */
+    /* Transición suave */
 }
 
-/* Efecto para que al pasar el ratón, la tarjeta se resalta un poco más */
+/* Efecto para que al pasar el ratón, la tarjeta resalte un poco más */
 .ids:hover,
 .segu:hover,
 .desa:hover {
@@ -506,7 +505,6 @@ article td {
 }
 
 /* Estilo de las imágenes dentro de la tabla */
-/* Centrado Horizontal de la imagen en su celda */
 article td figure {
     margin: 0;
     /* Reseteamos márgenes por defecto */
@@ -520,13 +518,13 @@ article td figure {
 
 article td img {
     max-width: 100%;
-    /* Hace la imagen responsive (para que no se salga de la caja) */
+    /* Hace la imagen "responsive" (para que no se salga de la caja) */
     height: auto;
     /* Mantiene la proporción */
     border-radius: 8px;
     /* Bordes redondeados en las imágenes */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    /* Sombra alrededor de la imagen */
+    /* Sombra muy suave alrededor de la imagen */
 }
 
 article figcaption {
@@ -559,13 +557,15 @@ article a {
     text-decoration: none;
     /* Quita el subrayado */
     color: var(--color-accent);
-    /* Color rojo suave (acorde al diseño anterior) */
+    /* Color rojo suave */
     font-weight: bold;
     border-bottom: 1px dotted var(--color-accent);
     /* Puntitos en lugar de línea */
     transition: color 0.3s ease;
+    /* Transición un poco lenta */
 }
 
+/* Al pasar el ratón sobre los enlaces */
 article a:hover {
     color: var(--color-profblue);
     /* Azul oscuro al pasar el ratón */
@@ -583,8 +583,8 @@ hr {
     /* Separación vertical amplia */
 }
 
-/* --- RESPONSIVE PARA MÓVILES (Esto es muy importante si se usan tablas) --- */
-/* @media (), Con ese código, es como si le dijeramos al navegador: */
+/* "Responsive Design" para los móviles ¡importante!... si se usan tablas */
+/* "Media Queries" @media (), Con ese código, es como si le dijeramos al navegador: */
 /* "Si la pantalla es pequeña, olvida que esto es una tabla y ponme la imagen encima del texto". */
 @media (max-width: 768px) {
 
@@ -612,6 +612,7 @@ hr {
 
 /* Separación y estilo para Contacto */
 .contacto {
+    position: relative;
     margin-top: 80px;
     /* Separador con respecto al anterior */
     background-color: var(--color-box);
@@ -623,9 +624,10 @@ hr {
     flex-wrap: wrap;
     /* Permite que los elementos bajen de línea si no caben */
     margin-bottom: 60px;
-    /* Un margen final para que no se pegue con el <footer> */
+    /* Último margen para que no se pegue con el <footer> */
 }
 
+/* Estilo para el titulo Contacto "h2" */
 .contacto h2 {
     color: var(--color-profblue);
     border-bottom: 2px solid var(--color-eee);
@@ -636,11 +638,9 @@ hr {
 /* Para el estilo del formulario */
 .contacto form {
     max-width: 600px;
-    /* Limita el ancho para que no se vea gigante en pantallas grandes */
+    /* Limita el ancho para que no se vea excesivamente grande */
     margin: 0 auto;
     /* Centra el formulario en la pantalla */
-    position: relative;
-
 }
 
 /* Estilo para las etiquetas (label) */
@@ -653,7 +653,7 @@ hr {
     color: var(--color-profblue);
 }
 
-/* Estilo para que los campos de texto ("inputs" y "textarea") mantengan la armonía con el documento */
+/* Estilo para que los textos "inputs" y "textarea" mantengan la armonía con el resto del documento */
 .contacto input[type="text"],
 .contacto input[type="email"],
 .contacto input[type="tel"],
@@ -661,7 +661,7 @@ hr {
     width: 100%;
     /* Ocupa todo el ancho disponible */
     padding: 12px;
-    /* Espacio interno cómodo */
+    /* Espacio interno */
     margin-bottom: 20px;
     /* Separación con el siguiente campo */
     border: 1px solid var(--color-ccc);
@@ -669,21 +669,21 @@ hr {
     box-sizing: border-box;
     /* Asegura que el padding no rompa el ancho */
     font-family: inherit;
-    /* Mantiene la misma fuente del resto del documento */
+    /* ¡Detalle!, mantiene la misma fuente del resto del documento */
     font-size: 1em;
     transition: border-color 0.3s ease;
 }
 
-/* Efecto al hacer clic en cada campo ("focus") */
+/* Efecto al hacer clic en cada campo "focus" */
 .contacto input:focus,
 .contacto textarea:focus {
     outline: none;
     border-color: var(--color-accent);
-    /* Se "acentúa" (ilumina) el borde del "imput" con ese color */
+    /* Se ilumina el borde del "imput" con ese color (acentúa) */
     background-color: var(--color-fff);
 }
 
-/* Estilo para los botones del Formulario ("enviar" y "borrar") */
+/* Estilo para los botones del Formulario "enviar" y "borrar" */
 .contacto input[type="submit"],
 .contacto input[type="reset"] {
     padding: 12px 25px;
@@ -691,12 +691,12 @@ hr {
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    /* Esto cambia el cursor del ratón a una mano con un dedo extendido (similar a un enlace) cuando pasa sobre un elemento, indicando que es interactivo y se puede hacer clic en él */
+    /* ¡Curiosidad!, esto cambia el cursor del ratón a una mano con un dedo extendido (similar a un enlace) cuando pasa sobre un elemento, indicando que es interactivo y se puede hacer clic en él */
     margin-right: 10px;
     transition: background-color 0.3s ease, transform 0.1s;
 }
 
-/* Estilo para el botón "enviar" (Destacado) */
+/* Estilo para el botón "enviar" (Principal) */
 .contacto input[type="submit"] {
     background-color: var(--color-profblue);
     color: var(--color-fff);
@@ -706,7 +706,7 @@ hr {
 .contacto input[type="submit"]:hover {
     background-color: var(--color-box1);
     transform: scale(1.02);
-    /* Pequeño efecto de "click", se "hincha" un poco */
+    /* Pequeño efecto de "click", se "hincha" levemente */
 }
 
 /* Estilo para el botón "borrar" (Secundario) */
@@ -720,12 +720,12 @@ hr {
     color: var(--color-profblue);
 }
 
-/* Estilo para "PosData" (P.D.) */
+/* Estilo para "PosData" (P.D.) con "strong" */
 .contacto p strong {
     color: var(--color-accent);
 }
 
-/* Botón "Volver al principio" (LinkProf) */
+/* Botón "Volver al principio" "linkProf" */
 .linkProf {
     text-align: center;
     /* Centra el botón horizontalmente */
@@ -737,7 +737,7 @@ hr {
     text-decoration: none;
     /* Quita el subrayado */
     background-color: var(--color-accent);
-    /* Color inicial (Rojo suave) */
+    /* Color inicial (rojo suave) */
     color: var(--color-fff);
     padding: 12px 30px;
     /* Tamaño del botón */
@@ -753,21 +753,20 @@ hr {
 /* Efecto "hover" del botón volver */
 .linkProf a:hover {
     background-color: var(--color-dark);
-    /* Cambio lento al azul oscuro */
+    /* Cambio lento al gris oscuro */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
     /* Pequeño efecto de elevación */
 }
 
-/* Estilos para el <footer> (Pie de página) */
-
+/* Estilos para el "footer" (Pie de página) */
 footer {
     background-color: var(--color-profblue);
-    /* Mismo color oscuro que el Header para dar simetría */
+    /* Mismo color azul oscuro que el "header" para dar simetría */
     color: var(--color-fff);
     /* Texto en blanco para que haga contraste */
     padding: 40px 20px;
-    /* Espaciado generoso */
+    /* Espaciado moderado */
     text-align: center;
     /* Centra todo el contenido */
     border-top: 3px solid var(--color-accent);
@@ -821,23 +820,22 @@ footer {
 
 .links a:hover {
     color: var(--color-accent);
-    /* Cambia suavemente al "rojo suave" */
+    /* Cambia al "rojo suave" */
 }
 
-/* Estilo del nombre y copyright */
+/* Estilo del nombre y el "copyright" */
 footer p {
     margin: 10px 0;
     font-size: 1em;
     letter-spacing: 1px;
 }
 
-/* Estilo para la etiqueta <small> */
+/* Estilo para la etiqueta "small" */
 footer small {
     display: block;
     /* Asegura que ocupe su propia línea */
     margin-top: 15px;
     color: var(--color-bbb);
-    /* Color grisáceo para que sea discreto */
+    /* Color gris para que sea discreto */
     line-height: 1.6;
 }
-
