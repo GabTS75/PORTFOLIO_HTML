@@ -176,7 +176,7 @@ header .infoProf small {
 }
 
 /* Configuración de cada sección en su caja respectiva */
-.sobreMi, .formacion {
+.sobreMi, .formacion, .proyectos {
     max-width: 1000px;
     /* Ancho máximo para que no se estire demasiado en pantallas grandes */
     margin: 0 auto;
@@ -444,6 +444,150 @@ dd {
     margin-bottom: 5px;
 }
 
+/* Separación general de la sección, respecto a la sección anterior */
+.proyectos {
+    margin-top: 10px;
+}
 
+/* Estilo para las cajas "ids", "segu" y "desa" de Proyecto */
+/* Cojemos a las tres clases para que tengan el mismo estilo */
+.ids, .segu, .desa {
+    background-color: var(--color-box);
+    /* Fondo suave */
+    border: 1px solid var(--color-eee);
+    /* Borde sutil */
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+    padding: 25px;
+    /* Espacio interno */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    /* Sombra suave */
+
+     transition: box-shadow 0.3s ease; 
+    /* Transición suave por si quieres añadir efectos en el futuro */
+}
+
+/* Efecto para que al pasar el ratón, la tarjeta se resalta un poco más */
+.ids:hover, .segu:hover, .desa:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Estilizando la tabla */
+article table {
+    width: 100%;
+    /* La tabla ocupa todo el ancho disponible */
+    border-collapse: collapse;
+    /* Elimina espacios extraños entre celdas */
+    table-layout: fixed;
+    /* Ayuda a distribuir el espacio equitativamente */
+}
+
+/* Estilo para las celdas "td" */
+article td {
+    padding: 20px;
+    /* Espacio entre la imagen y el texto (figcaption) */
+    vertical-align: middle;
+    /* CENTRADO VERTICAL: Esto centra la imagen respecto al texto */
+}
+
+/* Estilo de las imágenes dentro de la tabla */
+/* Centrado Horizontal de la imagen en su celda */
+article td figure {
+    margin: 0;
+    /* Reseteamos márgenes por defecto */
+    text-align: center;
+    /* Alinea la imagen y su descripción (figcaption) al centro */
+    display: inline-block;
+    /* Comportamiento correcto dentro de la celda */
+    width: 100%;
+    /* Asegura que el contenedor figure ocupe el ancho */
+}
+
+article td img {
+    max-width: 100%;
+    /* Hace la imagen responsive (para que no se salga de la caja) */
+    height: auto;
+    /* Mantiene la proporción */
+    border-radius: 8px;
+    /* Bordes redondeados en las imágenes */
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+    /* Sombra alrededor de la imagen */
+}
+
+article figcaption {
+    margin-top: 10px;
+    /* Separación entre foto y texto */
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--color-box1);
+    text-align: center;
+    /* Asegura que el texto del pie de foto esté centrado */
+}
+
+/* Estilo para el título del Proyecto "h4" */
+article h4 {
+    color: var(--color-profblue);
+    margin-top: 0;
+    /* Quita margen superior para que se alinee bien con la foto */
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+article p {
+    color: var(--color-box1);
+    margin-bottom: 15px;
+}
+
+/* Estilo para los enlaces del proyecto */
+article a {
+    text-decoration: none;
+    /* Quita el subrayado */
+    color: var(--color-accent);
+    /* Color rojo suave (acorde al diseño anterior) */
+    font-weight: bold;
+    border-bottom: 1px dotted var(--color-accent);
+    /* Puntitos en lugar de línea */
+    transition: color 0.3s ease;
+}
+
+article a:hover {
+    color: var(--color-profblue);
+    /* Azul oscuro al pasar el ratón */
+    border-bottom-style: solid;
+    /* Pasa a línea sólida al pasar el ratón */
+}
+
+/* Los separadores "hr" */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    /* Efecto de línea muy sutil que se desvanece en los extremos */
+    margin: 40px 0;
+    /* Separación vertical amplia */
+}
+
+/* --- RESPONSIVE PARA MÓVILES (Esto es muy importante si se usan tablas) --- */
+/* Esto asegura que en el móvil no se vea todo aplastado */
+@media (max-width: 768px) {
+    article table, article tbody, article tr, article td {
+        display: block;
+        /* Convierte las celdas en bloques uno debajo de otro */
+        width: 100%;
+    }
+    
+    article td {
+        padding: 10px 0;
+        /* Ajusta el padding para móviles */
+        text-align: center;
+        /* Centra todo en el móvil */
+    }
+    
+    article img {
+        width: 80%;
+        /* Hace que la imagen sea un poco más pequeña en móvil */
+    }
+}
 
 
