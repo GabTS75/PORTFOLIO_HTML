@@ -26,7 +26,7 @@ html {
     --color-bg1: lightcyan;
     --color-bg2: lightblue;
     --color-dark: #202020;
-    --color-header: #dffdff20;
+    --color-header: #dffdff;
     --color-box: #fdfdfd;
     --color-box1: #555;
     --color-box2: #333;
@@ -52,7 +52,7 @@ html {
 body {
     font-family: "Roboto", Helvetica, sans-serif;
     /* Tipo de letra de todo el documento */
-    color: var(--color-dark);
+    color: var(--color-header);
     /* Color de la letra de todo el documento */
 }
 
@@ -70,10 +70,10 @@ header {
     /* Centra todo el contenido horizontalmente */
     padding: 30px 20px;
     /* Espacio interno arriba/abajo y lados */
-    background-color: var(--color-header);
+    background-color: var(--color-profblue);
     /* Color de fondo suave */
-    border-bottom: 1px solid var(--color-ddd);
-    /* Línea sutil de separación inferior */
+    border-bottom: 3px solid var(--color-accent);
+    /* Línea decorativa acentuada de separación inferior */
 }
 
 /* Espaciado para el bloque del título */
@@ -86,7 +86,7 @@ header .encabezado {
 header h1 {
     margin: 0 0 10px 0;
     /* Quita margen superior y deja un poco abajo */
-    color: var(--color-dark);
+    color: var(--color-header);
 }
 
 /* Estilo "Botón" para el enlace de GitHub/LinkedIn */
@@ -96,7 +96,7 @@ header .encabezado .linkProf a {
     /* Necesario para aplicar padding y transformaciones */
     text-decoration: none;
     /* Quita el subrayado */
-    background-color: var(--color-profblue);
+    background-color: var(--color-accent);
     /* Color inicial */
     color: var(--color-box);
     /* Texto clarito */
@@ -114,8 +114,8 @@ header .encabezado .linkProf a {
 
 /* Efecto Hover del "botón" (al pasar el ratón) */
 header .encabezado .linkProf a:hover {
-    background-color: var(--color-accent);
-    /* Cambio a color rojo suave (color de acento) */
+    background-color: var(--color-dark);
+    /* Cambio a color final */
     transform: translateY(-2px);
     /* Pequeño efecto de elevación */
 }
@@ -141,9 +141,9 @@ nav li {
 /* Se usa "::after" para crear el símbolo después de cada <li>, excepto el último */
 nav li:not(:last-child)::after {
     content: "|";
-    margin: 0 12px;
+    margin: 0 15px;
     /* Espacio a los lados del símbolo */
-    color: var(--color-ccc);
+    color: var(--color-bbb);
     /* Color gris suave para el separador */
 }
 
@@ -151,19 +151,19 @@ nav li:not(:last-child)::after {
 nav a {
     text-decoration: none;
     /* Quita el subrayado */
-    color: var(--color-box1);
-    /* Color de texto gris oscuro */
+    color: var(--color-header);
+    /* Color de texto contraste */
     font-size: 1.1em;
-    font-weight: 500;
+    font-weight: 600;
     /* Definen el tamaño "size" y el grosor "weight" de la fuente de un elemento */
-    transition: color 0.4s ease;
+    transition: color 0.8s ease;
     /* Transición lenta de color */
 }
 
 /* Efecto Hover del menú */
 nav a:hover {
     color: var(--color-accent);
-    /* Cambia al mismo color de acento que el botón */
+    /* Cambia al color acentuado */
 }
 
 /* Estilo para el texto pequeño académico */
@@ -171,7 +171,7 @@ header .infoProf small {
     display: block;
     /* Convierte un elemento HTML en un "bloque", haciendo que ocupe todo el ancho disponible de su contenedor */
     margin-top: 5px;
-    color: var(--color-box1);
+    color: var(--color-bbb);
     line-height: 1.5;
 }
 
@@ -744,12 +744,98 @@ hr {
     font-weight: bold;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    transition: background-color 0.8s ease, box-shadow 0.3s ease;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    /* Transición lenta (0.5 segundos) */
 }
 
 /* Efecto "hover" del botón volver */
 .linkProf a:hover {
-    background-color: var(--color-profblue);
+    background-color: var(--color-dark);
     /* Cambio lento al azul oscuro */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    /* Pequeño efecto de elevación */
 }
+
+/* Estilos para el <footer> (Pie de página) */
+
+footer {
+    background-color: var(--color-profblue);
+    /* Mismo color oscuro que el Header para dar simetría */
+    color: var(--color-fff);
+    /* Texto en blanco para que haga contraste */
+    padding: 40px 20px;
+    /* Espaciado generoso */
+    text-align: center;
+    /* Centra todo el contenido */
+    border-top: 3px solid var(--color-accent);
+    /* Línea decorativa rojo suave */
+    margin-top: 60px;
+}
+
+/* Configuración de los enlaces (GitHub y LinkedIn) */
+.links ul {
+    list-style: none;
+    /* Quita las viñetas */
+    padding: 0;
+    margin: 0 0 20px 0;
+    /* Espacio debajo de la lista */
+    display: flex;
+    /* Flexbox para alinear horizontalmente */
+    justify-content: center;
+    /* Centra los elementos */
+    gap: 15px;
+    /* Espacio entre los elementos */
+}
+
+.links li {
+    display: flex;
+    align-items: center;
+}
+
+/* Inserta el símbolo "|" entre los elementos */
+.links li:not(:last-child)::after {
+    content: "|";
+    /* Agrega la barra vertical */
+    margin-left: 15px;
+    /* Separa la barra del texto */
+    color: var(--color-bbb);
+    /* Color gris suave para la barra */
+    font-weight: normal;
+}
+
+/* Estilo y transición de los enlaces */
+.links a {
+    text-decoration: none;
+    /* Quita el subrayado */
+    color: var(--color-eee);
+    /* Color blanco azulado suave */
+    font-weight: bold;
+    font-size: 1.1em;
+    
+    /* Transición lenta del color */
+    transition: color 0.8s ease;
+}
+
+.links a:hover {
+    color: var(--color-accent);
+    /* Cambia suavemente al "rojo suave" */
+}
+
+/* Estilo del nombre y copyright */
+footer p {
+    margin: 10px 0;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+/* Estilo para la etiqueta <small> */
+footer small {
+    display: block;
+    /* Asegura que ocupe su propia línea */
+    margin-top: 15px;
+    color: var(--color-bbb);
+    /* Color grisáceo para que sea discreto */
+    line-height: 1.6;
+}
+
